@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
+    <head>
+        <link th:href="@{/css/aplikasi.css}" rel="stylesheet"/>
+        <title>Edit Barang</title>
+    </head>
+    <body>
+
+        <section layout:fragment="content">
+
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                
+                <a class="btn btn-primary" th:href="@{/materi/list}">Kembali</a>
+                <br />
+                <br />
+
+                <h1 class="page-header">Edit Materi</h1>
+
+                <form class="form-horizontal" th:action="@{/materi/form}" method="post" th:object="${materi}">
+
+                    <input type="hidden" th:field="*{id}"/>
+
+                    <div class="form-group" th:classappend="${#fields.hasErrors('nomor')} ? 'has-error'">
+                        <label for="nomor" class="col-sm-2 control-label">Nomor Produk</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="nomor" placeholder="Nomor Produk" 
+                                   th:field="*{nomor}"/>
+                            <label class="control-label" th:errors="*{nomor}">
+                                Pesan error nanti di sini
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" th:classappend="${#fields.hasErrors('nama')} ? 'has-error'">
+                        <label for="nama" class="col-sm-2 control-label">Nama Produk</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="nama" placeholder="Nama Produk" 
+                                   th:field="*{nama}"/>
+                            <label class="control-label" 
+                                   th:errors="*{nama}">
+                                Pesan error nanti di sini
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" th:classappend="${#fields.hasErrors('deskripsi')} ? 'has-error'">
+                        <label for="deskripsi" class="col-sm-2 control-label">Deskripsi</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="deskripsi" placeholder="Deskripsi" 
+                                   th:field="*{deskripsi}"/>
+                            <label class="control-label" 
+                                   th:errors="*{deskripsi}">
+                                Pesan error nanti di sini
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" th:classappend="${#fields.hasErrors('gambar')} ? 'has-error'">
+                        <label for="gambar" class="col-sm-2 control-label">Url Gambar</label>
+                        <div class="col-sm-10">
+                            <input type="text" 
+                                   class="form-control" id="gambar" placeholder="url gambar" 
+                                   th:field="*{gambar}"/>
+                            <label class="control-label" th:errors="*{gambar}">
+                                Pesan error nanti di sini
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" th:classappend="${#fields.hasErrors('harga')} ? 'has-error'">
+                        <label for="harga" class="col-sm-2 control-label">Harga</label>
+                        <div class="col-sm-10">
+                            <input type="text" 
+                                   class="form-control" id="harga" placeholder="Harga" 
+                                   th:field="*{harga}"/>
+                            
+                            <label class="control-label" th:errors="*{harga}">
+                                Pesan error nanti di sini
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" th:classappend="${#fields.hasErrors('status')} ? 'has-error'">
+                        <label for="status" class="col-sm-2 control-label">Status</label>
+                        <div class="col-sm-10">
+                            
+                            <select class="form-control" name="status" th:field="*{status}">
+                                <option value="">select status produk</option>
+                                <option th:value="READY" th:text="READY">READY</option>
+                                <option th:value="INDENT" th:text="INDENT">INDENT</option>
+                                <option th:value="NOTAVAILABLE" th:text="NOTAVAILABLE">NOT AVAILABLE</option>
+                            </select>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" th:classappend="${#fields.hasErrors('shareto')} ? 'has-error'">
+                        <label for="shareto" class="col-sm-2 control-label">Share to</label>
+                        <div class="col-sm-10">
+
+                            <select class="form-control" name="shareto" th:field="*{shareto}">
+                                <option value="">select Admin - Castle Pro</option>
+                                <option th:each="account : ${daftarAccount}" 
+                                        th:value="${account.userName}"
+                                        th:text="${account.userName}">Tanpa Share</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Simpan</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+    </body>
+</html>

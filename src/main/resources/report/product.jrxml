@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-05-08T02:15:46 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="product" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b33b8c06-8799-41a5-826a-20a2042a0efd">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="terakhirUpdate" class="java.util.Date">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nomor" class="java.lang.Double"/>
+	<field name="nama" class="java.lang.String"/>
+	<field name="harga" class="java.lang.Double"/>
+	<field name="deskripsi" class="java.lang.String"/>
+	<field name="gambar" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="80" y="0" width="398" height="24" uuid="7a191020-f1b3-4290-b551-c6f0152e95db"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Daftar Barang]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="30" height="19" uuid="470ef1a4-dbd4-40f4-87e3-878daa8b0ae7"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="0" width="99" height="19" uuid="1a31e542-3a6b-4f8e-884d-2963198245bf"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="0" width="130" height="19" uuid="9eff1453-d65e-4500-8ba9-14647c30701d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Deskripsi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="349" y="0" width="130" height="19" uuid="7465b3e3-270d-4611-afb5-f09dd41b5321"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Gambar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="0" width="90" height="19" uuid="cae0ee4a-b192-4c4b-ac94-dec5a8574302"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="0" width="70" height="19" uuid="ece0ca79-933a-4614-99cd-2b98767ca96e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="30" height="20" uuid="2ef6365d-5465-40fe-89ef-f16d0e28467a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[  $F{nomor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="0" width="99" height="20" uuid="9eefe5e4-f699-4ee7-83a3-0e7b80a99c22"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[  $F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="0" width="90" height="20" uuid="d43b9ae7-7e49-4669-93db-c2b7a73fb86a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[  $F{harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="0" width="130" height="20" uuid="eae6fbc6-12ee-42d2-9938-2af282a0c45d"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[  $F{deskripsi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="349" y="0" width="130" height="20" uuid="51fcddf4-f8cd-4549-82b2-f7cf306784d6"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[  $F{gambar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="0" width="70" height="20" uuid="c5fa77b0-be2e-422d-a354-a8d6254375eb"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[  $F{status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="50" y="10" width="26" height="20" uuid="866612f2-4d5b-44f0-95f3-b078bba492bb"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="10" width="50" height="20" uuid="b4b4a278-fb56-4334-b3c7-2e7f6dc6d4c0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[halaman]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="10" width="30" height="20" uuid="21d892ec-96c6-43a7-b190-47f675402424"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[dari]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="10" width="28" height="20" uuid="7bbd4dd3-1b51-48ae-9f9f-b59ce88e847a"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="280" height="20" uuid="5f243d17-0f89-4d64-a191-23daa22c76b8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[tanggal cetak :  ]]></text>
+			</staticText>
+			<textField pattern="MMM d, yyyy h:mm:ss a">
+				<reportElement x="280" y="0" width="269" height="20" uuid="2b7d2be3-a33e-440e-9379-2db99f221c44"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{terakhirUpdate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

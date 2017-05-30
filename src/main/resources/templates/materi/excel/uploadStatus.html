@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+    @author fvsaddam | fvmonster.corp@gmail.com
+-->
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
+
+    <head>
+        <title>Upload Excel Status</title>
+        <link th:href="@{/css/aplikasi.css}" rel="stylesheet"/>
+    </head>
+
+    <body>
+
+        <section layout:fragment="content">
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                
+                <h1>Upload Excel Status</h1>
+
+                <div th:if="${message}">
+                    <h2 th:text="${message}"/>
+                </div>
+
+                <a class="btn btn-primary" th:href="@{/materi/list}">Kembali</a>
+                
+            </div>            
+        </section>
+
+    </body>
+</html>
