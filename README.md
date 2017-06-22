@@ -2,6 +2,8 @@
 
 <!-- [fvPrice List] -->
 
+contoh site: http://fvpricelist-fvsaddam.rhcloud.com/login
+
 Aplikasi untuk membantu menginput data dari file excel ke dalam database.
 Dan Juga dapat digunakan untuk meng-export data dari database ke file excel dan pdf.
 
